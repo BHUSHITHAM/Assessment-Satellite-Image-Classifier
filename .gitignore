@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# runtime artifacts -- generated fresh each run, don't belong in git
+results.db
+results.db-wal
+results.db-shm
+stored_tiles/
+server*.log
+dashboard.log
+
+# OS/editor cruft
+.DS_Store
+.vscode/

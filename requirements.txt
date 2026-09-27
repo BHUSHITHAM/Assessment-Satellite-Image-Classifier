@@ -1,0 +1,24 @@
+# Training + serving API requirements.
+#
+# NOTE on torch install: a plain `pip install torch` on Linux pulls in a huge
+# stack of separate nvidia-cu* GPU dependency packages by default (multiple
+# GB), even if you only intend to run on CPU. If you're on a disk-constrained
+# machine, or have no GPU anyway, install with:
+#
+#     pip install torch --no-deps
+#     pip install torchvision --no-deps
+#     pip install -r requirements.txt   # everything else, deps included
+#
+# On Google Colab, just use the normal `pip install torch torchvision` --
+# Colab's environment handles this fine already.
+
+torch>=2.0
+torchvision>=0.15
+scikit-learn>=1.0
+pillow>=9.0
+numpy>=1.23
+
+# serving API
+fastapi>=0.100
+uvicorn>=0.20
+python-multipart>=0.0.5

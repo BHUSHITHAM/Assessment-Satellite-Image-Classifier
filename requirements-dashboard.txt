@@ -1,0 +1,8 @@
+# Dashboard-only requirements -- deliberately does NOT include torch/
+# torchvision. The dashboard reads the results SQLite file directly and
+# never runs the model, so it doesn't need the ML stack at all -- keeps its
+# install much smaller and its startup much faster.
+
+streamlit>=1.30
+streamlit-autorefresh>=1.0
+pillow>=9.0
